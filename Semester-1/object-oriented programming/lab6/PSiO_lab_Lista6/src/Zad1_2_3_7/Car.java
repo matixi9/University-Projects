@@ -1,0 +1,11 @@
+package Zad1_2_3_7;
+
+public class Car extends Vehicle {
+    public Car(String brand, int year) {
+        super(brand, year);
+    }
+
+    public double getFuelConsumption() {
+        return 6;
+    };
+}

@@ -1,0 +1,5 @@
+Liczba produktów: 3
+Suma cen: 1328.89
+Średnia cena wg kategorii:
+peryferie -> 264.95
+monitory -> 799.00
