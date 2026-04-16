@@ -2,7 +2,9 @@
 
 This repository is a collection of academic projects, laboratories, and programming assignments completed during my university studies. It mainly focuses on Java, demonstrating the development of skills – from the basics of object-oriented programming to more complex topics like system simulations.
 
-## 🗂 Repository Structure
+---
+
+## Repository Structure
 
 The projects are divided into semesters and specific courses:
 
@@ -25,14 +27,30 @@ This directory contains a series of laboratories (Lists 1-11) introducing and de
 
   The project also includes a data generator (`DataGenerator`) and a statistics collection system (`Statistics`).
 
-## 🛠 Technologies
+
+* **Lab 2 - Disk Simulation:** A Java project simulating the operation of various CPU scheduling algorithms. The implemented algorithms are:
+  * **FCFS** (First-Come, First-Served)
+  * **SSTF** (Round Robin)
+  * **SCAN** (Shortest Job First - non-preemptive)
+  * **C_SCAN** (Shortest Remaining Time First - preemptive SJF
+  * **EDF** ()
+  * **FD_SCAN** ()
+
+  The project also includes a data generator (`DataGenerator`) and a statistics collection system (`Statistics`).
+
+
+---
+
+## Technologies
 The following technologies and tools were used in the repository:
 * **Language:** Java (JDK 11+)
 * **Dependency Management:** Maven (in newer labs, e.g., Lab 10 and Lab 11)
 * **Libraries and frameworks:** JavaFX (GUI), JUnit (Testing)
 * **IDE:** IntelliJ IDEA
 
-## 🚀 How to run the projects
+---
+
+## How to run the projects
 Most of the smaller projects from the first semester are standard console applications that can be run by executing the `main` method in the selected class (e.g., `Main.java`).
 
 For projects using Maven (e.g., `Lab 10` and `Lab 11` from the first semester):
