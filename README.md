@@ -20,7 +20,7 @@ This directory contains a series of laboratories (Lists 1-11) introducing and de
 
 ### Semester 2: Operating Systems
 * **Lab 1 - CPU Simulation:** A Java project simulating the operation of various CPU scheduling algorithms. The implemented algorithms are:
-    * **FCFS** (First-Come, First-Served)
+    * **FCFS** (First Come First Served)
     * **RR** (Round Robin)
     * **SJF** (Shortest Job First - non-preemptive)
     * **SJFw** (Shortest Remaining Time First - preemptive SJF)
@@ -28,16 +28,23 @@ This directory contains a series of laboratories (Lists 1-11) introducing and de
   The project also includes a data generator (`DataGenerator`) and a statistics collection system (`Statistics`).
 
 
-* **Lab 2 - Disk Simulation:** A Java project simulating the operation of various CPU scheduling algorithms. The implemented algorithms are:
-  * **FCFS** (First-Come, First-Served)
-  * **SSTF** (Round Robin)
-  * **SCAN** (Shortest Job First - non-preemptive)
-  * **C_SCAN** (Shortest Remaining Time First - preemptive SJF
-  * **EDF** ()
-  * **FD_SCAN** ()
+* **Lab 2 - Disk Simulator**
+A disk drive simulation designed to compare the performance of various disk scheduling algorithms. The program simulates handling track requests and calculates the total head movement (seek distance). Used algorithms:
+  * **FCFS** (First-Come, First-Served): Processes requests in the exact order they arrive.
+  * **SSTF** (Shortest Seek Time First): Selects the request closest to the current head position to minimize seek time.
+  * **SCAN** (Elevator Algorithm): The head moves in one direction, servicing all requests until it reaches the end of the disk, then reverses direction.
+  * **C-SCAN** (Circular SCAN): Similar to SCAN, but when the head reaches the end, it immediately returns to the beginning without servicing requests on the return trip.
+  * **EDF** (Earliest Deadline First): A real-time algorithm that prioritizes requests based on their specific deadlines.
+  * **FD-SCAN** (Feasible Deadline SCAN): A variation of SCAN that considers deadlines, moving towards the nearest request that can still be serviced before its deadline expires.
 
-  The project also includes a data generator (`DataGenerator`) and a statistics collection system (`Statistics`).
+#### Project Structure:
+- `src/disksimulator/algorithms/`: Core implementations of the scheduling strategies.
+- `src/disksimulator/models/`: Data models including `Disk`, `Ticket` (request), and `Statistics`.
+- `src/disksimulator/utils/`: Utility classes like `TicketsGenerator` for creating random test scenarios.
+- `Main.java`: The entry point of the application, where simulation parameters (disk size, number of requests) are configured.
 
+#### Usage:
+The simulation defaults to 500 requests on a disk with 200 blocks. Results are outputted to the console, showing the total head displacement for each algorithm, allowing for direct efficiency comparison.
 
 ---
 
